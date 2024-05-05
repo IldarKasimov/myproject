@@ -43,7 +43,7 @@ class Post(models.Model):
 
     def get_summary(self):
         words = self.content.split()
-        return f'{'/'.join(words[:8])}...'
+        return f'{" ".join(words[:8])}...'
 
     def get_s(self):
         num = self.title[-1]
