@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table border="=1">
+    {% for author in authors %}
+        <tr>
+            <td>{{author.name}}</td>
+            <td>{{author.email}}</td>
+            <td><a href="{% url 'del_author' author.id %}">Удалить</a></td>
+            <td><a href="{% url 'post_full2' author.id %}">Показать</a></td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

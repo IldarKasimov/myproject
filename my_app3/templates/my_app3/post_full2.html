@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    {% for post in posts %}
+        {{post.get_summary}}
+    {% endfor %}
+<a href="{% url 'get_all' %}">Вернутся</a>
+{% endblock %}
